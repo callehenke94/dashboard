@@ -63,11 +63,12 @@
 
         <div class="main">
             <div class="topbar">
-                <div class="toggle"></div>
+                <div class="toggle" onclick="toggleMenu();"></div>
                 <div class="search">
-                    <lable>
-                     <input type="text" placeholder="search"> 
-                    </lable>
+                    <label>
+                     <input type="text" placeholder="search">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
                 </div> 
                 <div class="user">
                      <img src="user.jpg">
@@ -75,5 +76,15 @@
             </div>
         </div>
     </div>
+<script>
+    function toggleMenu(){
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+        toggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+        main.classList.toggle('active')
+    }
+</script>
 </body>
 </html>
